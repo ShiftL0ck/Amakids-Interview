@@ -1,0 +1,143 @@
+h1, h2 {
+  margin: 10px 10px;
+}
+
+.game {
+  width: 553px;
+  padding: 40px 0;
+  display: flex;
+flex-direction: column;
+align-items: center;
+}
+.game-field {
+  display: flex;
+  flex-direction: column;
+}
+.game-field .cell, 
+.game-field .col {
+  flex: 1;
+}
+.game-field .col {
+  display: flex;
+}
+.game-field .cell {
+  flex: 1;
+  border: 3px solid #000;
+  margin: 10px;
+}
+.game-field .cell.start {
+  flex: 1;
+  border: 3px solid #000;
+  margin: 10px;
+}
+.cell {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 900;
+  cursor: pointer;
+  min-height: 100px;
+  transition: all .3s;
+  border-radius: 3px;
+}
+.cell:hover {
+  background: #d5d5d5; 
+}
+.cell::after {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
+  box-sizing: border-box;
+  text-align: center;
+}
+.cell_start {
+  background-color: yellow;
+  color: #000;
+}
+.cell_start::after {
+  content: 'START';
+}
+.the-chosen-one.cell_start::after {
+  content: '';
+}
+.the-chosen-one {
+  background-color: rgba(100, 100, 100, 0.92);
+}
+.cell_should-been-chosen {
+  background-color: green;
+}
+.the-chosen-one.cell_should-been-chosen::after {
+  content: 'WIN!';
+}
+
+.cell_should-been-chosen::after {
+  content: 'I WAS HERE!';
+}
+.arrow {
+  background: url('../img/arrow_left.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 55px;
+  width: 55px;
+}
+.arrow-right {
+  transform: rotate(180deg);
+}
+.arrow-right {
+  transform: rotate(180deg);
+}
+.arrow-down {
+  transform: rotate(270deg);
+}
+.arrow-up {
+  transform: rotate(90deg);
+}
+
+.guide {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+
+button {
+  margin-top: 15px;
+  height: 65px;
+  width: 150px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  background: #efefef;
+  border: 2px solid #000;
+  transition: all .3s;
+  cursor: pointer;
+  font-weight: 900;
+}
+button:hover {
+  background: #d5d5d5;
+}
+
+.statistics {
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+width: 100%;
+}
+.statistics * {
+  margin: 5px 0;
+}
+@media (max-width: 600px) {
+.game {
+  width: 350px;
+  }
+  .game-field .cell {
+    min-height: 90px;
+    margin: 5px;
+  }
+  :root{
+font-size: 14px;
+  }
+}

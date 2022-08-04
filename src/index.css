@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Indie Flower', cursive;
+  letter-spacing: 1px;
+}
+body, html {
+  
+}
+#root {
+  flex-direction: column;
+  max-height: 100vh;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  overflow-Y: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
